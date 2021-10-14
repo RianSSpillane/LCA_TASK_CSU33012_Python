@@ -4,9 +4,9 @@ Lowest Common Ancestor Task for Software Engineering CSU33012
 This repository contains the python implementation of this assignment. I have never used Python previous to this assignment.
 
 Please __see the following files in the Main Branch__ for the final implementation of this problem :
-- BinaryTree.py : Contains implementation of a binrary tree (for ints) and the LCA problem
-- LCAtest.py : Contains test code for Binary.py using Python Unittest framework
-- practiceMain.py : Contains bits of code used for trial and error during assignment 
+- __BinaryTree.py__ : Contains implementation of a binrary tree (for ints) and the LCA problem
+- __LCAtest.py__ : Contains test code for Binary.py using Python Unittest framework
+- __practiceMain.py__ : Contains bits of code used for trial and error during assignment 
 
 The Main branch contains a screen capture of the test results and a screen recording of 
 the solution running in Visual Studio Code. These are under the following names :
