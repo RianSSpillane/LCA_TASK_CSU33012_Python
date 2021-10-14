@@ -1,71 +1,88 @@
-#File for implementing Bianry Tree and LCA method
+# File for implementing Bianry Tree and LCA method
+
+#This is my attempt at trying out a new programming langaugae --> I chose python 
+
+#To build a tree : 
+## tree =  Tree()
+## tree.add(6)
+## tree.add(4)
+## ree.add(10)
+
+# Class for nodes
 class Node:
-    def __init__(self, val):
+    # Constructor
+    def __init__(self, value):
         self.left= None
         self.right = None
-        self.v = val
+        self.v = value
 
+# Class for building a tree
 class Tree:
             
     # Constructor
     def __init__(self):
         self.root = None
 
+    #Find the root
     def findRoot(self):
         return self.root
     
     # Function for adding elements to the tree
-    def add(self, val):
+    def add(self, value):
         if self.root is None:
-            self.root = Node(val)
+            self.root = Node(value)
         else:
-            self._add(val, self.root)
+            self.addRecursive(value, self.root)
 
     # Recursive function for adding elements to the tree
-    def _add(self, val, node):
-        if val < node.v:
+    def addRecursive(self, value, node):
+        if value < node.v:
             if node.left is not None:
-                self._add(val, node.left)
+                self.addRecursive(value, node.left)
             else:
-                node.left = Node(val)
+                node.left = Node(value)
         else:
             if node.right is not None:
-                self._add(val, node.right)
+                self.addRecursive(value, node.right)
             else:
-                node.right = Node(val)
+                node.right = Node(value)
 
     #Find if an element exists in the tree
-    def find(self, val):
+    def find(self, value):
         if self.root is not None:
-            return self._find(val, self.root)
+            return self.findRecursive(value, self.root)
         else:
             return None
 
     # Recursive function for seeing if element exists in the tree
-    def _find(self, val, node):
-        if val == node.v:
+    def findRecursive(self, value, node):
+        if value == node.v:
             return node
-        elif (val < node.v and node.left is not None):
-            return self._find(val, node.left)
-        elif (val > node.v and node.right is not None):
-            return self._find(val, node.right)
+        elif (value < node.v and node.left is not None):
+            return self.findRecursive(value, node.left)
+        elif (value > node.v and node.right is not None):
+            return self.findRecursive(value, node.right)
 
     def deleteTree(self):
         self.root = None
 
-    def printTree(self):
-        if self.root is not None:
-            self._printTree(self.root)
+    
+    #Attempt at implementing the same printing method as I did in java
+    def printTreeInOrder(self):
+        if self.root is None:
+            print('()')
+        else :
+            self._printTreeInOrder(self.root)
 
-    def _printTree(self, node):
-        if node is not None:
-            self._printTree(node.left)
-            print(str(node.v) + ' ')
-            self._printTree(node.right)
+    def _printTreeInOrder(self, node):
+        if node is None :
+            print('()')
+        else :
+            print("(" + self._printTreeInOrder(node.left) + node.value + self._printTreeInOrder(node.right) + ")")	
 
     
 def findPath( root, path, k):
-# Base Case
+    # Base Case
     if root is None:
         return False
 
@@ -88,32 +105,33 @@ def findPath( root, path, k):
     return False
 
 
-# Returns LCA if node n1 , n2 are present in the given
+# Returns LCA if node A , B are present in the given
 # binary tre otherwise return -1
-def findLCA(root, n1, n2):
+def findLCA(root, A, B):
 
-    # To store paths to n1 and n2 fromthe root
-    path1 = []
-    path2 = []
+    # To store paths to A and B fromthe root
+    pathA = []
+    pathB = []
 
-    # Find paths from root to n1 and root to n2.
-    # If either n1 or n2 is not present , return -1
-    if (not findPath(root, path1, n1) or not findPath(root, path2, n2)):
+    # Find paths from root to A and root to B.
+    # If either A or B is not present , return -1
+    if (not findPath(root, pathA, A) or not findPath(root, pathB, B)):
+        # If elements don't exist return -1
         return -1
 
     # Compare the paths to get the first different value
-    i = 0
-    while(i < len(path1) and i < len(path2)):
-        if path1[i] != path2[i]:
+    counter= 0
+    while(counter< len(pathA) and counter < len(pathB)):
+        if pathA[counter] != pathB[counter]:
             break
-        i += 1
-    return path1[i-1]
+        counter+= 1
+    return pathA[counter-1]
 
 
 
 
-
-#Check if it is working : 
+#------------------------------------------------------------------
+#Check if structure it is working : 
 tree = Tree()
 tree.add(6)
 tree.add(4)
