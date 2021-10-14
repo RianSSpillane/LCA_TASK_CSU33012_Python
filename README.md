@@ -1,7 +1,7 @@
 # LCA_TASK_CSU33012
 Lowest Common Ancestor Task for Software Engineering CSU33012
 
-This repository contains the python implementation of this assignment (new coding language used)
+This repository contains the python implementation of this assignment. I have never used Python previous to this assignment.
 
 Please __see the following files in the Main Branch__ for the final implementation of this problem :
 - BinaryTree.py : Contains implementation of a binrary tree (for ints) and the LCA problem
@@ -13,10 +13,13 @@ the solution running in Visual Studio Code. These are under the following names 
 - Test Results Screenshot.png
 - Recording LCA Python Implementation .mov
 
+# Approach
+I tried to follow a test-driven approach when working on this assignment. I first built a basic implementation of a bianry tree and the LCA solution. Then I tested this. Using my findings from the tests I improved my code further. I repeated this process for 2 times. Each new implementation and round of tests are shown on a seperate branch in this repository. 
 
+# Questions?
+If you have any questions or run in to any issues when examing my submission please email me at : spillari@tcd.ie
 
-
-Notes : 
+# Notes : 
 - I was delayed beginning on this assignment as I spent week 3 of college attending the F1Tenth autonomous driver competition in Prague with the Formula Trinity Autonomous Team. 
 - I also have never worked with git before so spent the start of week 4 trying to get my head around it and figure out what I needed to know or this assignment
 - In addition, I have decided to move to visual studios as my new developer environment so have also spent some time trying to familize myself with how this environment works before begininng this project.
