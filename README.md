@@ -21,6 +21,6 @@ If you have any questions or run in to any issues when examing my submission ple
 
 # Notes : 
 - I was delayed beginning on this assignment as I spent week 3 of college attending the F1Tenth autonomous driver competition in Prague with the Formula Trinity Autonomous Team. 
-- I also have never worked with git before so spent the start of week 4 trying to get my head around it and figure out what I needed to know or this assignment
+- I also have never worked with git before so spent the start of week 4 trying to get my head around it and figure out what I needed to know or this assignment. I found it quite confusing at first but hopefully think that I got the hang of it by the end of this assignment (after many tutorial videos). If there is anything which I may have been doing wrong in relation to git please let me know :)
 - In addition, I have decided to move to visual studios as my new developer environment so have also spent some time trying to familize myself with how this environment works before begininng this project.
-
+- I believe it was mentioned in one of the drop in sessions that a build script and run script could also be submitted  with this assignment. I do not know what these types of scripts entail and have never worked with them before. As this was not mentioned in the original assignment description or the the description on blackboard, and also due to time constraints (I have 3 other assignments due this week), I have decided not write these scripts. However, if you are having any trouble runnign my code, please get in touch with me and I can figure out how to write them and send them on to you.
