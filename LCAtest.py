@@ -1,4 +1,18 @@
-#File for runnign tests 
+# -----------------------------------------------------------------------------------------
+# CSU33012 ASSIGNMENT 1 : LOWEST COMMON ANCESTOR
+# IMPLEMENTING SOLUTION IN PROGRAMMING LANGUAGE NOT USED BEFORE
+# 
+# This class implements python unittest testting framework  
+#
+# These unit tests are performed on  both the binary tree structure 
+# and the lowest common ancestor method solution
+# 
+# Note : I have implemented that the LCA of a parent and child node is the parent
+# 
+# @author : Rian Spillane
+# @Date : 14/10/21
+# @PythonVersion : Python 2.7.16
+# -----------------------------------------------------------------------------------------
 
 #Import the binary tree structure 
 from BinaryTree import *
@@ -53,7 +67,6 @@ class LCAtests(unittest.TestCase):
         #  5     15
         # /  \   /
         # 2   7 13
-        # non balanced tree
         tree =  Tree()
         tree.add(10)
         tree.add(5)
@@ -62,3 +75,20 @@ class LCAtests(unittest.TestCase):
         tree.add(7)
         tree.add(13)
         self.assertEqual(findLCA(tree.root, 2, 13), 10)
+        self.assertEqual(findLCA(tree.root, 2, 7), 5)
+        self.assertEqual(findLCA(tree.root, 5, 15), 10)
+
+    def testElementNotPresent(self):
+        #     10
+        #   /    \
+        #  3     18
+        # /  \   /
+        # 1   7 13
+        tree =  Tree()
+        tree.add(10)
+        tree.add(3)
+        tree.add(7)
+        tree.add(1)
+        tree.add(18)
+        tree.add(13)
+        self.assertEqual(findLCA(tree.root, 2, 100), -1)

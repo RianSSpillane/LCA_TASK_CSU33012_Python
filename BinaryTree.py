@@ -1,12 +1,19 @@
-# File for implementing Bianry Tree and LCA method
-
-#This is my attempt at trying out a new programming langaugae --> I chose python 
-
-#To build a tree : 
+# -------------------------------------------------------------------------------------------------------
+# CSU33012 ASSIGNMENT 1 : LOWEST COMMON ANCESTOR
+# IMPLEMENTING SOLUTION IN PROGRAMMING LANGUAGE NOT USED BEFORE
+# 
+# This class implements a Binary Tree Structure and a solttion to the Lowest Common Ancestor (LCA) porblem
+# 
+# To build a tree : 
 ## tree =  Tree()
 ## tree.add(6)
 ## tree.add(4)
 ## ree.add(10)
+#
+# @author : Rian Spillane
+# @Date : 14/10/21
+# @PythonVersion : Python 2.7.16 
+# ------------------------------------------------------------------------------------------------------
 
 # Class for nodes
 class Node:
@@ -14,7 +21,7 @@ class Node:
     def __init__(self, value):
         self.left= None
         self.right = None
-        self.v = value
+        self.v = value 
 
 # Class for building a tree
 class Tree:
@@ -128,8 +135,6 @@ def findLCA(root, A, B):
     return pathA[counter-1]
 
 
-
-
 #------------------------------------------------------------------
 #Check if structure it is working : 
 tree = Tree()
@@ -140,5 +145,7 @@ tree.add(2)
 tree.add(5)
 tree.add(6)
 tree.add(3)
+tree.add(30)
+tree.add(0)
 #tree.printTree()
 print(findLCA(tree.root, 4, 10))

@@ -1,4 +1,18 @@
+# ----------------------------------------------------------------------------------------
+# CSU33012 ASSIGNMENT 1 : LOWEST COMMON ANCESTOR
+# IMPLEMENTING SOLUTION IN PROGRAMMING LANGUAGE NOT USED BEFORE
+# 
+# This class was used to test out using python
+# I used it to learn how to import another python class 
+# I also used it to test if the tree would run okay 
+# 
+# @author : Rian Spillane
+# @Date : 14/10/21
+# @PythonVersion : Python 2.7.16
+# ----------------------------------------------------------------------------------------
+
 print("Hello World")
+print(1)
 
 
 #Import class :
